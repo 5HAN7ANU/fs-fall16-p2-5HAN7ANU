@@ -1,0 +1,11 @@
+<ul class="list-group" id="category{{post.categoryname}}">
+    <li class="list-group-item">TITLE: {{ post.title }}</li>
+    <li class="list-group-item">AUTHOR: {{ post.authorfirstname}} {{ post.authorlastname}}</li>
+    <li class="list-group-item">CATEGORY: {{ post.categoryname }}</li>
+    <li class="list-group-item">LAST EDIT: {{ post.createdAt | date: 'short' }}</li>
+    <li class="list-group-item">
+        <a href="/{{ post.id }}">
+            <button id="button">READ</button>
+        </a>
+    </li>
+</ul>

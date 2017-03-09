@@ -1,0 +1,26 @@
+<center>    
+    <br><br><br>
+    <div id="fixed-header">
+        <div id="header">NG-BLOG-USERS</div>
+        <div id="loggedInUser">{{ loggedInUser }}</div>
+        <a href="/">
+            <button id="button">RETURN HOME</button>
+        </a>
+        <a href="/users/create">
+            <button id="button">CREATE USER</button>
+        </a>
+    </div>
+    <br> 
+    <div id="userlistmargin"></div>
+    <div id="userListContainer">
+        <div id="usersList" ng-repeat="u in users">
+            <h3>{{ u.firstname }} {{ u.lastname }}</h3>
+            <h4>{{ u.email }}</h4>
+            <h4>{{ u.role }}</h4>
+            <a href="/users/{{ u.id }}/update">
+                <button id="button">EDIT</button>
+            </a>
+            <button id="button" ng-click="deleteUser(u)">DELETE</button>
+        </div>
+    </div>
+</center>

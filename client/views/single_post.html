@@ -1,0 +1,24 @@
+<center>
+    <br><br>
+    <div id="single-post-fixed-header">
+        <div id="header">NG-BLOG</div>
+        <br>
+        <div id="loggedInUser">{{ loggedInUser }}</div>
+        <br>
+        <a href="/">
+            <button id="button">RETURN HOME</button>
+        </a>
+        <a ng-href="/{{ featuredPost.id }}/update">
+            <button id="button" class="edit-button">EDIT</button>
+        </a>
+        <button id="button" class="delete-button" ng-click="deletePost()">DELETE</button>   
+    </div>
+    <br><br>
+    <div class="singlePost">
+        <div class="content">{{ featuredPost.title }}</div>
+        <div class="content">BY: {{ featuredPost.authorfirstname }} {{ featuredPost.authorlastname }}</div>
+        <div class="content">Category: {{ featuredPost.categoryname }}</div>
+        <div class="content">At: {{ featuredPost.createdAt | date: 'short' }}</div>
+        <div class="content"> {{ featuredPost.content }}</div>
+    </div>
+</center>

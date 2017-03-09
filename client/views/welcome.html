@@ -1,0 +1,23 @@
+<center>
+    <br><br>
+    <div id="fixed-header">
+        <div id="header">NG-BLOG</div>
+        <div id="loggedInUser">{{ loggedInUser }}</div>
+        <button id="button" class="compose-button" ng-click="composePage()">COMPOSE</button>
+        <button id="button" class="login-button" ng-click="loginPage()">LOGIN</button>
+        <a href="/contact">
+            <button id="button">CONTACT US</button>
+        </a>
+        <a href="/users">
+            <button id="button" class="view_users-button">VIEW USERS</button>
+        </a>
+        <button id="button" class="logout-button" ng-click="logoutPage()">LOGOUT</button>
+        <p></p>
+    </div>
+</center>
+
+<div class="posts">
+    <div class="post" ng-repeat="post in posts">
+        <blog-post post-data="post"></blog-post>
+    </div>
+</div>

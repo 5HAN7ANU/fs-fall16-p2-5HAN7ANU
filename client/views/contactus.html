@@ -1,0 +1,21 @@
+<center>
+    <div id="fixed-header">
+        <div id="header">NG-BLOG</div>
+        <div id="header">CONTACT US</div>
+        <a href="/">
+            <button id="button">RETURN HOME</button>
+        </a>
+    </div>
+    <div id="contactus">
+        <label for="from">YOUR EMAIL ADDRESS: </label>
+        <input type="text" name="from" ng-model="fromAddress">
+        <p></p>
+        <label for="subject">SUBJECT: </label>
+        <input type="text" name="subject" ng-model="subject">
+        <p></p>
+        <label for="body">MESSAGE: </label>
+        <textarea name="body" id="emailTextArea" rows="6" ng-model="body"></textarea>
+        <p></p>
+        <button id="button" ng-click="contactus()">SEND EMAIL</button>
+    </div>
+</center>

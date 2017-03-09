@@ -1,0 +1,31 @@
+<center>
+    <br><br>
+    <div id="fixed-header">
+        <div id="header">NG-BLOG-COMPOSE</div>
+        <div id="loggedInUser">{{ loggedInUser }}</div>
+        <a href="/">
+            <button id="button">RETURN HOME</button>
+        </a>
+    </div>
+    <div class="compose">
+        <br><br>
+        <input type="text" ng-model="newPostTitle" placeholder="Title">
+        <br><br>
+        <select id="category-box" ng-model="newPostCategoryId">
+            <option value="">Select Category</option>
+            <option ng-repeat="category in categories" value="{{ category.id }}">{{ category.name }}</option>
+        </select>
+        <br><br>
+        <select id="user-box" ng-model="newPostUserId">
+            <option value="">Select User</option>
+            <option ng-repeat="user in users" value="{{ user.id }}">{{ user.firstname }} {{ user.lastname }}</option>
+        </select>
+        <label for="authorname" id="author_label">AUTHOR: </label>
+        <div class="authorname" name="authorname">{{ me.firstname }} {{ me.lastname }}</div>
+        <br>
+        <br>
+        <textarea ng-model="newPostContent" id="updateTextArea" placeholder="Type Here"></textarea>
+        <br>
+        <button ng-click="savePost()" id="button">SAVE POST</button>
+    </div>
+</center>

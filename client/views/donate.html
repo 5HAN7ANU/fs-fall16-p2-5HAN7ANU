@@ -1,0 +1,24 @@
+<center>
+    <div id="fixed-header">
+        <div id="header">NG-BLOG</div>
+        <div id="header">DONATE</div>
+        <a href="/">
+            <button id="button">RETURN HOME</button>
+        </a>
+    </div>
+    <p></p>
+    <p></p>
+    <div id="cardinfo">
+        <input type="text" ng-model="cardNumber" placeholder="Card Number">
+        <p></p>
+        <input type="number" ng-model="cvc" placeholder="CVC">
+        <p></p>
+        <input type="number" ng-model="expMonth" placeholder="Month">
+        <p></p>
+        <input type="number" ng-model="expYear" placeholder="Year">
+        <p></p>
+        <input type="number" ng-model="amount" placeholder="Amount">
+        <p></p>
+        <button id="button" ng-click="chargeCard()">DONATE</button>
+    </div>
+</center>

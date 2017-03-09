@@ -1,0 +1,25 @@
+<center>
+    <br><br>
+    <div id="header">NG-BLOG</div>
+    <a href="/{{ featuredPost.id }}">
+        <button id="button">RETURN TO POST</button>
+    </a>
+    <a href="/">
+        <button id="button">RETURN HOME</button>
+    </a>
+    <br><br>
+    <label for="authorname">AUTHOR: </label>
+    <div class="authorname" name="authorname">{{ featuredPost.authorfirstname }} {{ featuredPost.authorlastname }}</div>
+    <br><br>
+    <label for="title">TITLE: </label>
+    <input type="text" name="title" ng-model="featuredPost.title">
+    <br><br>
+    <label for="category">CATEGORY: </label>
+    <select name="category" ng-model="featuredPost.categoryid">
+        <option value="{{ category.id }}" ng-repeat="category in categories">{{ category.name }}</option>
+    </select>
+    <br><br>
+    <textarea ng-model="featuredPost.content" id="updateTextArea"></textarea>
+    <br><br>
+    <button id="button" ng-click="updatePost()">UPDATE</button>
+</center>
